@@ -14,14 +14,6 @@ const config = defineConfig({
     tanstackStart(),
     viteReact(),
   ],
-  optimizeDeps: {
-    exclude: ['fsevents', 'chokidar'],
-    esbuildOptions: {
-      platform: 'browser',
-      conditions: ['module', 'browser', 'default'],
-      external: ['fsevents', 'chokidar', '*.node', '**/*.node'],
-    },
-  },
 })
 
 export default config
